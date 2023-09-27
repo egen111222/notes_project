@@ -14,6 +14,7 @@ from file_presenter import (check_file,
 check_file(FILENAME)
 
 notes = read_from_file(FILENAME)
+
 print(notes)
 while True:
     choice = input("""1 створити замітку
@@ -21,10 +22,16 @@ while True:
 3 видалити замітки
 4 вихід:""")
     if choice == "1":
-        pass
+        note = create_note()
+        notes.append(note)
     if choice == "2":
-        pass
+        read_notes(notes)
     if choice == "3":
-        pass
+        notes.clear()
     if choice == "4":
         break
+
+
+
+
+
