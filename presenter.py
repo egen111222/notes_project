@@ -1,5 +1,9 @@
+from datetime import datetime
+
 def create_note():
-    pass
+    note = {"text":input("Текст замітки:"),
+            "date":datetime.now()}
+    return note
 
 
 
