@@ -4,7 +4,7 @@
 import pickle
 import os
 
-def read_form_file(filename):
+def read_from_file(filename):
     with open(filename,"rb") as file:
         return pickle.loads(file.read())
 
