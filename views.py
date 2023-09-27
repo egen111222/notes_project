@@ -5,8 +5,11 @@
 # видаляти
 
 # всі нотати зберігаються у файлі заданому в конфігурації
+from models import FILENAME
+import os
+from file_presenter import check_file
 
-
+check_file(FILENAME)
 
 while True:
     choice = input("""1 створити замітку
