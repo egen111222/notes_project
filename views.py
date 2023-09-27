@@ -5,17 +5,18 @@
 # видаляти
 
 # всі нотати зберігаються у файлі заданому в конфігурації
+
 from models import FILENAME
 import os
 from file_presenter import (check_file,
                             read_from_file,
                             write_to_file)
+from presenter import (create_note,read_notes)
 
 check_file(FILENAME)
 
 notes = read_from_file(FILENAME)
 
-print(notes)
 while True:
     choice = input("""1 створити замітку
 2 чиати замітки
@@ -29,7 +30,9 @@ while True:
     if choice == "3":
         notes.clear()
     if choice == "4":
+        write_to_file(FILENAME,notes)
         break
+    write_to_file(FILENAME,notes)
 
 
 
