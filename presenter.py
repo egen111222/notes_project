@@ -8,4 +8,6 @@ def create_note():
 
 
 def read_notes(notes):
-    pass
+    for number,note in enumerate(notes,1):
+        print(f""" {note['text']} Було додано {note['date']} """)
+        print("-"*35)
